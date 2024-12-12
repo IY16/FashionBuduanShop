@@ -1,0 +1,240 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <style>
+        /* General Body Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffeef8; /* Light pink */
+            color: #333; /* Dark text for contrast */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Container Styles */
+        .container {
+            flex-grow: 1;
+            background-color: #fff; /* White background for content */
+        }
+
+        /* Header Styles */
+        .header {
+            background-color: #ff9ecf; /* Bright pink */
+            color: black;
+            text-align: center;
+            padding: 5px;
+            font-size: 1.5em;
+			
+        }
+
+        .header img {
+            width: 80px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .header h1 {
+            margin: 10px;
+			
+			
+        }
+
+        .header p {
+            margin: 0;
+            font-size: 0.9em;
+            font-weight: lighter;
+        }
+
+        /* Search Bar */
+        .search-bar {
+            margin-top: 10px;
+        }
+
+        .search-bar input {
+            padding: 8px;
+            width: 200px;
+            border: 1px solid #ff4f8b;
+            border-radius: 4px;
+        }
+
+        .search-bar button {
+            padding: 8px 12px;
+            background-color: #ff4f8b;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        /* Navigation Bar Styles */
+        .nav {
+            display: flex;
+            justify-content: center;
+            background-color: #ffeef8; /* Light pink */
+        }
+
+        .nav a {
+            color: #ff4f8b; /* Darker pink */
+            padding: 10px 20px;
+            text-decoration: none;
+            text-align: center;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav a:hover {
+            background-color: #ff9ecf; /* Highlight color */
+            color: white;
+        }
+
+        /* Dropdown Styles */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #fff; /* White background */
+            border: 1px solid #ff4f8b; /* Pink border */
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: #ff4f8b; /* Pink text */
+            padding: 10px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ff9ecf; 
+            color: white;
+        }
+
+        /* Footer Styles */
+        .footer {
+            background-color: #ff9ecf; 
+            color: black;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 30px;
+            margin-top: auto;
+        }
+
+        /* Updated Carousel Styles */
+#outerbox {
+    width: 310px; /* Matches the width of a single image + margin */
+    overflow: hidden;
+    margin: 30px auto;
+}
+
+#sliderbox {
+    display: flex;
+    width: calc(310px * 10); /* Adjusted for 10 images at 300px + 10px margin */
+    animation: slider 15s ease-in-out infinite;
+}
+
+#sliderbox img {
+    width: 300px;
+    height: auto;
+    margin-right: 10px; /* Matches the margin adjustment */
+}
+
+@keyframes slider {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-3100px); } /* Matches total width of all images */
+}
+
+    
+
+        /* Responsive Design */
+        @media screen and (max-width: 600px) {
+            .header h1 {
+                font-size: 1.1em;
+            }
+
+            .nav {
+                flex-direction: column;
+            }
+
+            .nav a {
+                padding: 10px;
+            }
+
+            #outerbox {
+                width: 100%;
+            }
+
+            #sliderbox img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="fasion.jpg" alt="Ultimate Logo">
+            <h1>Fashion buduan shop</h1>
+            <p>STYLE IS A WAY TO SAY WHO YOU ARE WITHOUT HAVING TO SPEAK</p>
+            <div class="user-section">
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Search">
+                    <button onclick="search()">Search</button>
+                </div>
+            </div>
+        </div>
+        <div class="nav">
+            <a href="#">Home</a>
+            <div class="dropdown">
+            <a href="3d.html">Product</a>
+                <div class="dropdown-content">
+                    <a href="casual top.html">Casual crop top</a>
+                    <a href="fashion crop top.html">Fashion crop top</a>
+                    <a href="sleeve crop top.html">Sleeve crop top</a>
+                </div>
+            </div>
+            <a href="Portfolio.html">About</a>
+            <a href="Login (2).html">Log in</a>
+        </div>
+		<main>
+        <div class="carousel">
+            <div id="outerbox">
+                <div id="sliderbox">
+                    <img src="th (22).jpg" alt="Product 1">
+                    <img src="th (23).jpg" alt="Product 2">
+                    <img src="th (24).jpg" alt="Product 3">
+                    <img src="th (25).jpg" alt="Product 4">
+                    <img src="th (26).jpg" alt="Product 5">
+					<img src="th (27).jpg" alt="Product 6">
+					<img src="th (28).jpg" alt="Product 7">
+					<img src="th (29).jpg" alt="Product 8">
+					<img src="th (30).jpg" alt="Product 9">
+					<img src="th (31).jpg" alt="Product 10">
+				
+                </div>
+            </div>
+        </div>
+    </main>
+    
+       
+    </div>
+    <div class="footer">
+        <p>&copy; 2024 Fashion buduan shop. All Rights Reserved.</p>
+    </div>
+</body>
+</html>
